@@ -1,9 +1,8 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="500" height="300" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Macintosh" versionInfo="Saved by Adobe Flash Macintosh 12.0 build 481" majorVersion="12" buildNumber="481" viewAngle3D="50.6510299754819" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <media>
-          <DOMBitmapItem name="2.png" itemID="4fbdfc34-00000ac5" linkageExportForAS="true" linkageClassName="TxtBg" sourceExternalFilepath="./LIBRARY/2.png" sourceLastImported="1337850920" sourcePlatform="macintosh" externalFileSize="25336" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="2.png" bitmapDataHRef="M 2 1337850904.dat" frameRight="15080" frameBottom="5900"/>
-          <DOMBitmapItem name="txt.png" itemID="4fbdfb86-00000a58" linkageExportForAS="true" linkageClassName="Txt" sourceExternalFilepath="./LIBRARY/txt.png" sourceLastImported="1337850906" sourcePlatform="macintosh" externalFileSize="28517" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="txt.png" bitmapDataHRef="M 1 1337847708.dat" frameRight="15080" frameBottom="5900"/>
+          <DOMBitmapItem name="2.png" itemID="4fbdfc34-00000ac5" linkageExportForAS="true" linkageClassName="TxtBg" sourceExternalFilepath="./LIBRARY/2.png" sourceLastImported="1337850920" sourcePlatform="macintosh" externalFileSize="25336" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="2.png" bitmapDataHRef="M 2 1337850904.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="txt.png" itemID="4fbdfb86-00000a58" linkageExportForAS="true" linkageClassName="Txt" sourceExternalFilepath="./LIBRARY/txt.png" sourceLastImported="1337850906" sourcePlatform="macintosh" externalFileSize="28517" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="txt.png" bitmapDataHRef="M 1 1337847708.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
      </media>
-     <symbols/>
      <timelines>
           <DOMTimeline name="シーン 1">
                <layers>
@@ -11,9 +10,78 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <Actionscript>
-                                        <script><![CDATA[import inn.nowri.ka.hwanime.HandwrittenAnimation;import inn.nowri.ka.hwanime.HandwrittenAnimationVO;import inn.nowri.ka.hwanime.HandwrittenAnimationEvent;import flash.display.BitmapData;import flash.display.Bitmap;import flash.display.Sprite;function created(e:HandwrittenAnimationEvent):void{	//anime.scaleX=anime.scaleY=1;	//anime.x = stage.stageWidth/2 - anime.width/2 +5;	//anime.y = stage.stageHeight/2 - anime.height/2 +5;	anime.play();		addChild(container);	container.width=480;	container.scaleY = container.scaleX;	container.x = stage.stageWidth/2 - container.width/2;	container.y = stage.stageHeight/2 - container.height/2;}/**** BitmapData のリサイズ** @param BitmapData src 元となる BitmapData オブジェクト* @param Number hRatio 水平方向のリサイズ比率* @param Number vRatio 垂直方向のリサイズ比率* @return BitmapData リサイズされた BitmapData オブジェクト**/function resize(src:BitmapData, hRatio:Number, vRatio:Number):BitmapData{  var res:BitmapData = new BitmapData(    Math.ceil(src.width * hRatio), Math.ceil(src.height * vRatio)  );  res.draw(src, new Matrix(hRatio, 0, 0, vRatio), null, null, null, true);  return res;}var container:Sprite = new Sprite();var bmd:BitmapData = new TxtBg(0,0);var bmp:Bitmap = new Bitmap(bmd);var anime:HandwrittenAnimation = new HandwrittenAnimation(new Txt(0,0), 														  new HandwrittenAnimationVO(1, 10, 4, 1, 0.4, -1, false));anime.addEventListener(HandwrittenAnimationEvent.CREATE_COMPLETE, created);container.addChild(bmp);container.addChild(anime);//bmp.x = stage.stageWidth/2 - bmp.width/2;//bmp.y = stage.stageHeight/2 - bmp.height/2;]]></script>
+                                        <script><![CDATA[import inn.nowri.ka.hwanime.HandwrittenAnimation;
+import inn.nowri.ka.hwanime.HandwrittenAnimationVO;
+import inn.nowri.ka.hwanime.HandwrittenAnimationEvent;
+import flash.display.BitmapData;
+import flash.display.Bitmap;
+import flash.display.Sprite;
+
+function created(e:HandwrittenAnimationEvent):void
+{
+	//anime.scaleX=anime.scaleY=1;
+	//anime.x = stage.stageWidth/2 - anime.width/2 +5;
+	//anime.y = stage.stageHeight/2 - anime.height/2 +5;
+	anime.play();
+	
+	addChild(container);
+	container.width=480;
+	container.scaleY = container.scaleX;
+	container.x = stage.stageWidth/2 - container.width/2;
+	container.y = stage.stageHeight/2 - container.height/2;
+}
+
+/**
+*
+* BitmapData のリサイズ
+*
+* @param BitmapData src 元となる BitmapData オブジェクト
+* @param Number hRatio 水平方向のリサイズ比率
+* @param Number vRatio 垂直方向のリサイズ比率
+* @return BitmapData リサイズされた BitmapData オブジェクト
+*
+*/
+function resize(src:BitmapData, hRatio:Number, vRatio:Number):BitmapData
+{
+  var res:BitmapData = new BitmapData(
+    Math.ceil(src.width * hRatio), Math.ceil(src.height * vRatio)
+  );
+  res.draw(src, new Matrix(hRatio, 0, 0, vRatio), null, null, null, true);
+  return res;
+}
+
+
+var container:Sprite = new Sprite();
+var bmd:BitmapData = new TxtBg(0,0);
+var bmp:Bitmap = new Bitmap(bmd);
+
+var anime:HandwrittenAnimation = new HandwrittenAnimation(new Txt(0,0), 
+														  new HandwrittenAnimationVO(1, 10, 4, 1, 0.4, -1, false));
+anime.addEventListener(HandwrittenAnimationEvent.CREATE_COMPLETE, created);
+container.addChild(bmp);
+container.addChild(anime);
+
+//bmp.x = stage.stageWidth/2 - bmp.width/2;
+//bmp.y = stage.stageHeight/2 - bmp.height/2;
+
+
+]]></script>
                                    </Actionscript>
-                                   <elements/>
+                                   <elements>
+                                        <DOMShape selected="true" isFloating="true">
+                                             <matrix>
+                                                  <Matrix a="4.03225708007812" d="3.29670715332031" tx="-2947.4" ty="112.1"/>
+                                             </matrix>
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <SolidColor color="#FFFFFF"/>
+                                                  </FillStyle>
+                                             </fills>
+                                             <edges>
+                                                  <Edge fillStyle1="1" edges="!17099 -680S2|17099 1140!17099 1140|14619 1140!14619 1140|14619 -680!14619 -680|17099 -680"/>
+                                             </edges>
+                                        </DOMShape>
+                                   </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
