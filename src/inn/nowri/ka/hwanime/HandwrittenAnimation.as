@@ -1,5 +1,6 @@
 package inn.nowri.ka.hwanime
 {
+	import jp.flair4.lib.events.TimerEventOptimizer;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.Shape;
@@ -21,7 +22,7 @@ package inn.nowri.ka.hwanime
 		//---------------------------------------------------------------------------------------------------------------------------------------------
 		// Internal Properties
 		//---------------------------------------------------------------------------------------------------------------------------------------------
-		private var timer:Timer;
+		private var timer:TimerEventOptimizer;
 		private var vo:HandwrittenAnimationVO;
 		private var src:BitmapData;
 		private var color:uint;
@@ -43,7 +44,7 @@ package inn.nowri.ka.hwanime
 		public function play():void
 		{
 			pause();
-			timer = new Timer(int(1000/vo.fps),0);
+			timer = new TimerEventOptimizer(int(1000/vo.fps),0);
 			timer.addEventListener(TimerEvent.TIMER, update);
 			timer.start();
 		}
@@ -53,7 +54,7 @@ package inn.nowri.ka.hwanime
 			if(timer)
 			{
 				timer.stop();
-				if(timer.hasEventListener(TimerEvent.TIMER))timer.removeEventListener(TimerEvent.TIMER, update);
+				timer.removeEventListener(TimerEvent.TIMER, update);
 			}
 		}
 		// getter setter
