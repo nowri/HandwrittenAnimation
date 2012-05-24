@@ -1,4 +1,4 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="600" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Macintosh" versionInfo="Saved by Adobe Flash Macintosh 12.0 build 481" majorVersion="12" buildNumber="481" viewAngle3D="59.1837342884091" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="500" height="300" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Macintosh" versionInfo="Saved by Adobe Flash Macintosh 12.0 build 481" majorVersion="12" buildNumber="481" viewAngle3D="50.6510299754819" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
      <media>
           <DOMBitmapItem name="2.png" itemID="4fbdfc34-00000ac5" linkageExportForAS="true" linkageClassName="TxtBg" sourceExternalFilepath="./LIBRARY/2.png" sourceLastImported="1337850920" sourcePlatform="macintosh" externalFileSize="25336" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="2.png" bitmapDataHRef="M 2 1337850904.dat" frameRight="15080" frameBottom="5900"/>
           <DOMBitmapItem name="txt.png" itemID="4fbdfb86-00000a58" linkageExportForAS="true" linkageClassName="Txt" sourceExternalFilepath="./LIBRARY/txt.png" sourceLastImported="1337850906" sourcePlatform="macintosh" externalFileSize="28517" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="txt.png" bitmapDataHRef="M 1 1337847708.dat" frameRight="15080" frameBottom="5900"/>
@@ -22,6 +22,10 @@
      </timelines>
      <PrinterSettings platform="macintosh"/>
      <publishHistory>
+          <PublishItem publishSize="42850" publishTime="1337851722"/>
+          <PublishItem publishSize="42851" publishTime="1337851455"/>
+          <PublishItem publishSize="42853" publishTime="1337851331"/>
+          <PublishItem publishSize="42852" publishTime="1337851222"/>
           <PublishItem publishSize="42853" publishTime="1337851219"/>
           <PublishItem publishSize="42852" publishTime="1337851206"/>
           <PublishItem publishSize="42850" publishTime="1337851090"/>
@@ -38,9 +42,5 @@
           <PublishItem publishSize="22739" publishTime="1337850192"/>
           <PublishItem publishSize="22739" publishTime="1337850120"/>
           <PublishItem publishSize="22738" publishTime="1337850095"/>
-          <PublishItem publishSize="22747" publishTime="1337850069"/>
-          <PublishItem publishSize="22738" publishTime="1337850024"/>
-          <PublishItem publishSize="22825" publishTime="1337849996"/>
-          <PublishItem publishSize="22823" publishTime="1337849957"/>
      </publishHistory>
 </DOMDocument>
