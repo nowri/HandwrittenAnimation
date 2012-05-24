@@ -1,5 +1,6 @@
 package inn.nowri.ka.hwanime
 {
+	import flash.display.PixelSnapping;
 	import jp.flair4.lib.events.TimerEventOptimizer;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
@@ -135,7 +136,7 @@ package inn.nowri.ka.hwanime
 			cloneBmd = new BitmapData(bmdW+add*2, bmdH+add*2,true,0x00);
 			color = (vo.color!=-1)? vo.color:src.getPixel32(srcPos[0][0], srcPos[0][1]);
 			createBmdVec(srcPos,add);
-			bmp = new Bitmap(bmdVec[0]);
+			bmp = new Bitmap(bmdVec[0], PixelSnapping.NEVER, true);
 			bmp.x = minX-add;
 			bmp.y = minY-add;
 			addChild(bmp);
